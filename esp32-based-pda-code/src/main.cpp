@@ -14,8 +14,17 @@ void setup()
   Serial.begin(115200);
   leds::begin();
   oled::begin();
+  eink::begin();
 
-  oled::test(); // testing peripherals
+  pinMode(7, OUTPUT);
+  pinMode(21, OUTPUT);
+  digitalWrite(7, LOW);
+  digitalWrite(21, LOW);
+  
+  oled::test();
+  eink::test();
+  leds::start_blink_led1(200, 2);
+  leds::start_blink_led1(200, 2); // testing peripherals
 }
 
 void loop()
