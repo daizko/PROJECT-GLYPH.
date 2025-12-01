@@ -10,8 +10,11 @@
 
 namespace oled
 {
-    const int SDA_PIN = 8;
-    const int SCL_PIN = 9;
+    extern const int SDA_PIN;
+    extern const int SCL_PIN;
+    extern const int SCREEN_HEIGHT;
+    extern const int SCREEN_WIDTH;
     void begin();
+    void test();
 };
 #endif

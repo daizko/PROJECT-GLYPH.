@@ -13,6 +13,9 @@ void setup()
 {
   Serial.begin(115200);
   leds::begin();
+  oled::begin();
+
+  oled::test(); // testing peripherals
 }
 
 void loop()
